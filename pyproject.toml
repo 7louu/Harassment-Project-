@@ -7,6 +7,9 @@ name = "harassment_detection"
 version = "0.1.0"
 description = "A project for detecting cyberbullying and harassment using ML."
 requires-python = ">=3.9"
+dependencies = [
+    "kagglehub"
+]
 
 [tool.setuptools.packages.find]
 where = ["src"]
