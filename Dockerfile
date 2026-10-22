@@ -1,13 +1,16 @@
 FROM python:3.9
 
-WORKDIR /usr/local/app
+WORKDIR /app
 
 RUN python -m venv .venv
+
+COPY src ./src
+
+COPY pyproject.toml .
 
 RUN pip install --upgrade pip \
     && pip install .
 
-COPY src ./src
 
 RUN useradd app
 
