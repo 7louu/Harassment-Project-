@@ -1,7 +1,18 @@
 import pandas as pd
 import re
+from pathlib import Path
 
-df = pd.read_csv("datasets/saifulislam7/cyberbullying-and-harassment-detection-using-ml/versions/1/Approach to Social Media Cyberbullying and Harassment Detection Using Advanced Machine Learning.csv")
+DATASET_PATH = (
+    Path(__file__).resolve().parent
+    / "datasets"
+    / "saifulislam7"
+    / "cyberbullying-and-harassment-detection-using-ml"
+    / "versions"
+    / "1"
+    / "Approach to Social Media Cyberbullying and Harassment Detection Using Advanced Machine Learning.csv"
+)
+
+df = pd.read_csv(DATASET_PATH)
 
 # Display the first 10 rows of the DataFrame
 print(df.head(10))
@@ -70,3 +81,4 @@ print("Contains HTML:", has_html)
 # Nice it returned False so we don't have to worry about that
 # I think the current stage is not that bad, i'm going to save it since there are other steps to do. I'll be back if i noticed something else
 # or needed to improve something.
+
