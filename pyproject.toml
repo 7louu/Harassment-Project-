@@ -13,7 +13,8 @@ dependencies = [
     "re",
     "pymongo",
     "pydantic-settings",
-    "scikit-learn"
+    "scikit-learn",
+    "fastapi[standard]"
 ]
 
 [tool.setuptools.packages.find]
